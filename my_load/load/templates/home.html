@@ -6,8 +6,14 @@
 </head>
 <body>
 
+<!__> Кнопка перехода на страницу ввода формы
 
 <h1>Django Image Uploading</h1>
+<div class="btn">
+    <h2>Добавить картинку самостоятельно</h2>
+    <a href="post">ПЕРЕЙТИ</a>
+</div>
+
 <ul>
   {% for post in object_list %}
     <h2>{{ post.title }}</h2>
