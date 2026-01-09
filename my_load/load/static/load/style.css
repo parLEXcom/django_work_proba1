@@ -1,8 +1,10 @@
 
 h2{
     color: red;
+    font-size: 25px;
 }
 h1 {
+  margin-left: 700px;
   color: green;
   font-size: 24px;
 }
@@ -11,3 +13,13 @@ h1 {
 h2 {
  background-color: #f0f0f0;
  }
+img{
+height: 500px;
+}
+
+a {
+border: 1px solid black;
+border - color: red;
+margin: 10px;
+padding:10px;
+}
