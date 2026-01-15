@@ -12,6 +12,10 @@ class HomePageView(ListView):
     template_name = 'home.html'
 
 
+class IndexPageView(ListView):
+    model = Post
+    template_name = 'index.html'
+
 
 class CreatePostView(CreateView):
     model = Post
