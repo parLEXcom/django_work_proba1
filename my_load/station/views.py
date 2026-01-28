@@ -16,7 +16,14 @@ class Station_load(CreateView):
         if request.method == "POST":
             form = StationNanber(request.POST)
             if form.is_valid():
-                form.save()  # Сохранение в базу [1]
-                return reverse_lazy('home')
+                form.save()                      # Сохранение в базу [1]
         else:
             form_class = StationNanber
+
+class Station_view(ListView):
+    model = StationNanber
+    template_name = "station_view.html"
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        return StationNanber.objects.all()

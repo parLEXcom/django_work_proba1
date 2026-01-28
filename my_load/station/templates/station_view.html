@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'load/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<ul>
+  {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <h2>{{ post.data }}</h2>
+    <h2>{{ post.namber_1 }}</h2>
+    <h2>{{ post.namber_2 }}</h2>
+
+  {% endfor %}
+</ul>
+
+
+</body>
+</html>
