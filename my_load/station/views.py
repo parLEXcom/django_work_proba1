@@ -11,3 +11,12 @@ class Station_load(CreateView):
     form_class = StationNanber
     template_name = "station.html"
     success_url = reverse_lazy('home')
+
+    def create_object(request):
+        if request.method == "POST":
+            form = StationNanber(request.POST)
+            if form.is_valid():
+                form.save()  # Сохранение в базу [1]
+                return reverse_lazy('home')
+        else:
+            form_class = StationNanber
