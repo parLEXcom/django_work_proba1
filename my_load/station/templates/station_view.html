@@ -9,16 +9,51 @@
 </head>
 <body>
 
-<ul>
-  {% for post in posts %}
-    <h2>{{ post.title }}</h2>
-    <h2>{{ post.data }}</h2>
-    <h2>{{ post.namber_1 }}</h2>
-    <h2>{{ post.namber_2 }}</h2>
+<ul class="conteyner_stancoon">
 
-  {% endfor %}
-</ul>
+{%for i in object_list%}
 
 
+
+
+<table style="width:150px; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th colspan="2" style="border: 1px solid black;">{{i.data}}</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="100px" rowspan="5" style="border: 1px solid black;">{{i.title}}</td>
+            <td width="50px" style="border: 1px solid black;">{{i.namber_1}}</td>
+
+
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">{{i.namber_2}}</td>
+
+        </tr>
+    <tr>
+            <td style="border: 1px solid black;">{{i.namber_3}}</td>
+
+        </tr>
+    </tr>
+    <tr>
+            <td style="border: 1px solid black;">{{i.namber_4}}</td>
+
+        </tr>
+    </tr>
+    <tr>
+            <td style="border: 1px solid black;">{{i.namber_5}}</td>
+
+        </tr>
+    </tr>
+
+    </tbody>
+</table>
+{%endfor%}
+    </ul>
 </body>
 </html>
+

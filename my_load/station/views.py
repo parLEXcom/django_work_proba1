@@ -2,9 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 
-from station.forms import  StationNanber
+from station.forms import StationNanber
+from station.models import Station_namber
 
 
 class Station_load(CreateView):
@@ -21,9 +22,10 @@ class Station_load(CreateView):
             form_class = StationNanber
 
 class Station_view(ListView):
-    model = StationNanber
+    model = Station_namber
     template_name = "station_view.html"
-    context_object_name = 'posts'
 
-    def get_queryset(self):
-        return StationNanber.objects.all()
+    # def get_queryset(self):
+    #     return Station_namber.objects.filter(title="Станция 1")
+
+

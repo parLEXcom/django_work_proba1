@@ -12,13 +12,25 @@ h1 {
 margin: 40px;
 }
 
+.conteyner{
+display: grid;
+grid-template-columns: 200px 200px 200px 200px;
+}
+
+.conteyner_stancoon{
+width = 300px;
+}
+
+.td{
+width = 50px;
+}
 
 h2 {
  background-color: #f0f0f0;
  }
 img{
 height: 100px;
-opacity: 0.5
+opacity: 1;
 }
 
 a {
